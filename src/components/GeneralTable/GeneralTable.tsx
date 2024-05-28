@@ -12,13 +12,18 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { openModal, searchRepos, selectRepo } from "../../redux/actions/actions";
+import {
+  openModal,
+  searchRepos,
+  selectRepo,
+} from "../../redux/actions/actions";
 import { RootState } from "../../redux/reducers/reducers";
 import { Repo } from "../../redux/types/types";
-import { NoData, SearchBar } from "..";
+import { NoData, SearchBar, StandartButton } from "..";
 
 export const GeneralTable: React.FC = () => {
   const { repos, loading, error, pageInfo, repositoryCount } = useSelector(
@@ -77,7 +82,17 @@ export const GeneralTable: React.FC = () => {
     dispatch(searchRepos(query, newRowsPerPage));
   };
 
-  if (error) return <p>Error: {error}</p>;
+  if (error)
+    return (
+      <Box display={"flex"} gap={1} alignItems={"center"}>
+        <Typography>Seu token está incorreto ou inválido</Typography>
+        <Box>
+          <StandartButton onClick={() => window.location.reload()} bgcolor="#013F79">
+            Recarregar
+          </StandartButton>
+        </Box>
+      </Box>
+    );
 
   const handleEmptySearch = () => {
     //@ts-expect-error
@@ -90,7 +105,7 @@ export const GeneralTable: React.FC = () => {
       return description.slice(0, 30) + "...";
     }
     return description;
-  }
+  };
   return (
     <Stack paddingY={2}>
       <Box
