@@ -28,7 +28,6 @@ export const searchRepos = (
     const repos: Repo[] = response.data.search.edges.map((edge: any) => edge.node);
     const pageInfo: PageInfo = response.data.search.pageInfo;
     const repositoryCount: number = response.data.search.repositoryCount;
-    console.log(repositoryCount);
     dispatch({ type: SEARCH_REPOS, payload: { repos, pageInfo, repositoryCount } });
   } catch (error: any) {
     dispatch({ type: SET_ERROR, payload: error.message });

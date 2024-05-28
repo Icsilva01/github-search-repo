@@ -1,5 +1,6 @@
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import StarRateIcon from "@mui/icons-material/StarRate";
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import {
   Box,
   IconButton,
@@ -85,7 +86,8 @@ export const GeneralTable: React.FC = () => {
   if (error)
     return (
       <Box display={"flex"} gap={1} alignItems={"center"}>
-        <Typography>Seu token está incorreto ou inválido</Typography>
+        <ErrorOutlineIcon sx={{ color: "#9B0A0A" }} />
+        <Typography fontWeight={500} color={"#9B0A0A"}>Seu token está incorreto ou inválido</Typography>
         <Box>
           <StandartButton onClick={() => window.location.reload()} bgcolor="#013F79">
             Recarregar
