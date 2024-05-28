@@ -1,1 +1,1 @@
-export const Token = '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'
+export const Token = 'COLOQUE SEU TOKEN AQUI'

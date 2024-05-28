@@ -22,26 +22,6 @@ GitHub Search Repo é uma aplicação web que permite aos usuários pesquisar e 
 - **GraphQL**: Linguagem de consulta para a API do GitHub.
 - **Apollo Client**: Cliente GraphQL para realizar consultas.
 
-## Estrutura do Projeto
-
-- `src/`
-  - `components/`: Componentes React utilizados na aplicação.
-    - `RepoTable.tsx`: Componente que exibe a tabela de repositórios.
-    - `NoData.tsx`: Componente que exibe uma mensagem quando não há dados.
-  - `redux/`: Arquivos relacionados ao Redux.
-    - `actions/`: Ações do Redux.
-      - `actions.ts`: Ações para buscar repositórios, selecionar um repositório, abrir e fechar modal.
-    - `reducers/`: Redutores do Redux.
-      - `reducers.ts`: Redutores combinados para o estado da aplicação.
-    - `types/`: Tipos utilizados no Redux.
-      - `types.ts`: Definições de tipos para ações e estado.
-  - `infra/`: Arquivos de infraestrutura.
-    - `client.ts`: Configuração do Apollo Client.
-    - `query.ts`: Consultas GraphQL.
-  - `presentation/`: Arquivos de apresentação.
-    - `App.tsx`: Página principal da aplicação.
-  
-
 ## Instalação
 
 1. Clone o repositório:
@@ -57,10 +37,10 @@ GitHub Search Repo é uma aplicação web que permite aos usuários pesquisar e 
    npm install
    ```
 
-3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API do GitHub:
+3. Edite o arquivo `token.ts` na pasta de infra do projeto e adicione sua chave de API do GitHub:
 
    ```plaintext
-   REACT_APP_GITHUB_API_TOKEN=your_github_api_token
+   const Token = 'COLOQUE SEU TOKEN AQUI'
    ```
 
 4. Inicie a aplicação:
