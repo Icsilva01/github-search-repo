@@ -56,4 +56,4 @@ GitHub Search Repo é uma aplicação web que permite aos usuários pesquisar e 
 1. Digite uma consulta na barra de pesquisa e pressione "Enter" ou clique no botão de busca.
 2. Navegue pelos resultados da pesquisa usando a paginação.
 3. Clique no detalhe de um repositório para visualizar mais detalhes sobre ele.
-4. Caso queira limpar a consulta de busca já realizada, o botão "Limpar faz isso".
+4. Caso queira limpar a consulta de busca já realizada, o botão "Limpar" faz isso.
