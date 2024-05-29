@@ -1,1 +1,1 @@
-export const Token = 'COLOQUE AQUI O SEU TOKEN'
+export const Token = 'COLOQUE SEU TOKEN AQUI'

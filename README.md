@@ -46,10 +46,10 @@ GitHub Search Repo é uma aplicação web que permite aos usuários pesquisar e 
 4. Inicie a aplicação:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
-   A aplicação estará disponível em `http://localhost:3000`.
+   A aplicação estará disponível em `http://localhost:5173`.
 
 ## Uso
 
